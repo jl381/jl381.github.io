@@ -1,6 +1,18 @@
 body 
 {
 	background-color: black;
+	width: 1880px;
+}
+
+#A
+{
+	width:5px;
+	height: 5px;
+	background-color: white;
+	position: absolute;
+	left: 50px;
+	/*transform: translate(-20%, 0%);*/
+
 }
 
 #backImage 
