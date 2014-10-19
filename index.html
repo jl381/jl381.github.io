@@ -9,41 +9,42 @@
 </head>
 <body>
 
-  <div id="lightEffect">
   <div id="A"></div>
-  <div id="backImage"></div>
-  <div id="gray">
-    <div id="title">
-    Home Page
-    </div>
-<!--     <div id="titleBox">
-This is the introduction page. Text for the test of the text basically.
-    </div> -->
-    <div id="portrait"></div>
+  <div id="lightEffect">
+    <div id="backImage"></div>
 
-<!-- --------------------------------------------------------------------- -->
-    <div id="column">
-      
-    </div>
-    <div id="content">
-      
-    </div>
-<!-- --------------------------------------------------------------------- -->
+    <div id="page">
+      <div id="titleBox">
+        <div id="title">Home Page</div>
+      </div>
 
-    <div id="mapKeys">
-      <div id="mapKeysLeft"></div>
-      <div id="mapKeysRight"></div>
+      <div id="portrait"></div>
+
+      <!-- --------------------------------------------------------------------- -->
+      <div id="pageNavigation">
+
+      </div>
+      <div id="pageContent">
+
+      </div>
+      <!-- --------------------------------------------------------------------- -->
+
+      <div id="mapKeys">
+
+        <div id="mapKeysRight"></div>
+      </div>
     </div>
-</div>
   </div>
 </body>
 <script type="text/javascript" src="Script/index.js"></script>
+<script type="text/javascript" src="Script/raphael-min.js"></script>
+<script type="text/javascript" src="Script/Shape.js"></script>
+<script type = "text/javascript">createAnimation();</script>
 <script type = "text/javascript">
- setInterval(function(){ window.location = window.location; }, 1000);
+ // setInterval(function(){ window.location = window.location; }, 3000);
 </script>
 
 <script type = "text/javascript">
-lightUp(); 
-// <div id=""></div>
+  lightUp(); 
 </script>
 </html>
