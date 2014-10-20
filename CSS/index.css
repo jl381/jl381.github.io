@@ -1,29 +1,37 @@
 body 
 {
+	overflow-x: hidden;
+	margin: 0px;
 	background-image: url('../Image/background.png');
+}
+
+#line
+{
+	position: absolute;
+	top: 500px;
+	width: 105%;
+	height: 2px;
+	background-color: darkred;
+	margin-left: -5px;
+	border-color: black;
+	border-width: 3px;
+	border-style: ridge;
 }
 
 #lightEffect
 {
-	background: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,0.75), rgba(0,0,0,0.75), rgba(0,0,0,0.75), rgba(0,0,0,1));
-	background: -o-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,0.75), rgba(0,0,0,0.75), rgba(0,0,0,0.75), rgba(0,0,0,1)); 
-	background: -moz-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,0.75), rgba(0,0,0,0.75), rgba(0,0,0,0.75), rgba(0,0,0,1));
-	background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.75), rgba(0,0,0,0.75), rgba(0,0,0,0.75), rgba(0,0,0,1));
+	padding-bottom: 80px;
+	background: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
+	background: -o-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1)); 
+	background: -moz-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
+	background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
 }
-
-/*#A
-{
-	width:100%;
-	height: 1px;
-	margin: auto;
-	position: absolute;
-}*/
 
 #backImage 
 {
 	width: 100%;
 	height: 500px;
-	background-color: #350000;
+	background-image: url('../Image/backImage.png'); 
 	color: white;
 	font-size: 16pt;
 }
@@ -38,6 +46,7 @@ body
 	height: 1000px;
 	background-color: #808080;
 	margin: auto;
+	background-image: url('../Image/pageTexture.png');
 }
 
 #pageNavigation
@@ -63,7 +72,7 @@ body
 	height: 95%;
 	top: -50px;
 
-	border-color: rgba(205,205,205,0.75);
+	border-color: rgba(55,55,55,0.75);
 	border-width: 1px;
 	border-style: dashed;
 }
@@ -80,7 +89,6 @@ body
 	margin-left: 135px;
 
 	background-image: url('../Image/title.png');
-	background-alpha: 0.5;
 }
 
 #title
@@ -120,11 +128,13 @@ body
 #mapKeys
 {
 	position: fixed;
-	top: 450px;
+	top: 40%;
 	margin-left: 1000px;
 	width: 75px;
 	height: 350px;
 	background-color: #B0B0B0;
+
+	background-image: url('../Image/mapkeysTexture.png');
 }
 
 #mapKeysRight
@@ -132,6 +142,5 @@ body
 	float: right;
 	width: 25px;
 	height: 25px;
-	/*margin-right: 125px;*/
 	background-color: orange; 
 }

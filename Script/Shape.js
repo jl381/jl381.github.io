@@ -4,13 +4,7 @@
  var shapeArray = [];
  var borderMean = 100;
  var sMIN = 10, sMAX = 30;
- var shapeAmonut = 25;
-
-// sdelatj message content from bar go out,
-// raspolozhenie ramki paper
-// zakritj kvadrati  setkoj
-// soobshenie kruti vniz dlja contenta
-// glow effect, klik, move (kvadrat)
+ var shapeAmonut = 20;
 
 // The function starts up the whole animation process: creates paper, creates shapes, creates function-check like act
 function createAnimation()
@@ -52,7 +46,7 @@ function drawShape(shape, shapeWidth, posX, firstTime)
   shape.distance = 0; 
 
   // speed, the higher the divisor, the slower shape will when moving
-  var speed = 1/rand(1, 100);
+  var speed = 1/rand(1, 1000);
 
   // opacity gets randomized each time shape is drawn
   var opacity = rand(20,60)*0.01;
@@ -164,7 +158,6 @@ window.onresize = function()
   adjustPaper();
 }
 
-function p(msg){ document.getElementById("C").innerHTML = msg; }
 function rand(from,to){return Math.floor(Math.random()*(to-from+1)+from);}
 function randColor()
 {

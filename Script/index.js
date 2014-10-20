@@ -3,15 +3,9 @@ window.onresize = function()
 
 }
 
-
-function lightUp(){
-	var speed = 2000, maxVis = 75, minVis = 0, A, T = maxVis, ID=0;
-	setInterval(
-		function(){ 
-			if(T == maxVis) A = true; else if(T == minVis) A = false;
-			if(A && T != minVis) {T -= 1;} else {T += 1;}
-			setGradient(T/100);
-		}, speed);
+window.onscroll = function()
+{
+	setGradient(1 - getScrollY()/(document.body.clientHeight-window.innerHeight));
 }
 
 function setGradient(value){
@@ -29,24 +23,53 @@ function rand(from,to){
 	return Math.floor(Math.random()*(to-from+1)+from);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function getCssProperty(elmId, property){
    var elem = document.getElementById(elmId);
    return window.getComputedStyle(elem,null).getPropertyValue(property);
 }
 
-function print(msg){ document.getElementById("red").innerHTML = msg; }
+function getScrollY() {
+  var scrOfY = 0;
+  if( typeof( window.pageYOffset ) == 'number' ) {
+    //Netscape compliant
+    scrOfY = window.pageYOffset;
+  } else if( document.body && document.body.scrollTop ) {
+    //DOM compliant
+    scrOfY = document.body.scrollTop;
+  } else if( document.documentElement && document.documentElement.scrollTop ) {
+    //IE6 standards compliant mode
+    scrOfY = document.documentElement.scrollTop;
+  }
+  return scrOfY;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function print(msg){ document.getElementById("mapKeys").innerHTML = msg; }
+
+// !!! DEPRECATED !!! \\
+// function lightUp()
+// {
+// 	var speed = 200, maxVis = 75, minVis = 0, A, T = maxVis, ID=0;
+// 	setInterval(
+// 		function(){ 
+// 			if(T == maxVis) A = true; else if(T == minVis) A = false;
+// 			if(A && T != minVis) {T -= 1;} else {T += 1;}
+// 			setGradient(T/100);
+// 		}, speed);
+// }
