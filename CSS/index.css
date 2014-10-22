@@ -100,7 +100,7 @@ body
 
 }
 
-#contentBlock
+#block1
 {
 	position: relative;
 	width: 600px;
@@ -111,10 +111,38 @@ body
 	background-image: url('../Image/backgroundPresentation.png');
 	
 	border-top: 1px;
-	border-style: solid;
 	border-bottom: 1px;
+	border-style: solid;
 	/*border: 1px solid rgba(175, 99, 25, 1);*/
-	border-image: linear-gradient(90deg, black, rgba(175, 99, 25, 1), black) 1 1 100%;
+
+	-webkit-border-image: -webkit-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;
+	-moz-border-image: -moz-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;  
+	-o-border-image: -o-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;
+	border-image: linear-gradient(to right, black, rgba(175, 99, 25, 1), black) 1 1 100%; 
+}
+
+#leftBorder
+{
+	position: relative;
+	background-image: url('../Image/border1.png');
+
+	float: left;
+	width: 50px;
+	height: 766px;
+	margin-left: -50px;
+	margin-top: -30px;
+}
+
+#rightBorder
+{
+	position: relative;
+	background-image: url('../Image/border2.png');
+
+	float: right;
+	width: 50px;
+	height: 766px;
+	margin-right: -50px;
+	margin-top: -30px;
 }
 
 #footer
