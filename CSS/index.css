@@ -1,5 +1,238 @@
 body 
 {
+	height: 1000px;
+	margin: 0px;
+	overflow-x: hidden;
+	background-image: url('../Image/background.png');
+}
+
+#bodyBox
+{
+	width: inherit;
+	height: inherit;
+}
+
+#header
+{
+	width: 100%;
+	height: 150px;
+}
+
+#banner
+{
+	position: absolute;
+	width: 663px;
+	height: 150px;
+	background-image: url('../Image/frame.png');
+	left: 50%;
+	transform: translate(-50%, 0%);
+	z-index: -1;
+}
+
+.tabs a 
+{
+	float: left;  
+	width: 90px;
+	height: 30px;
+
+	background: gold;
+	text-decoration: none;
+
+	font-weight: bold;
+	font-size: 14pt;
+
+	padding-top: 10px;
+
+	text-align: center;  
+	color: black;
+
+	border-style: solid;
+	border-color: black;
+	border-width: 0px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	/*border-radius: 20px;*/
+
+	background: -webkit-linear-gradient(left, rgba(175, 99, 25, 1), black);
+	background: -o-linear-gradient(right, rgba(175, 99, 25, 1), black); 
+	background: -moz-linear-gradient(right, rgba(175, 99, 25, 1), black);
+	background: linear-gradient(0deg, rgba(175, 99, 25, 1), rgba(250,208,1,1) );
+}
+
+.tabs a:hover
+{
+	background: -webkit-linear-gradient(left, rgba(230, 125, 55, 1), rgba(175, 99, 25, 1), black);
+	background: -o-linear-gradient(right, rgba(230, 125, 55, 1), rgba(175, 99, 25, 1), black); 
+	background: -moz-linear-gradient(right, rgba(230, 125, 55, 1), rgba(175, 99, 25, 1), black);
+	background: linear-gradient(0deg, rgba(175, 99, 25, 1), rgba(250,258,1,1) );
+}
+
+#tabStart{border-radius: 20px 0 0 0px;}
+#tabEnd{border-radius: 0 20px 0px 0;}
+
+#navigationBar
+{
+	width: 460px;
+	height: 40px;
+	margin: auto;
+	padding-top: 110px;
+}
+
+/* ---- ---- ---- ---- ---- */
+
+#presentationBox
+{
+	width: 100%;
+	height: 95.37%;
+	background-image: url('../Image/backgroundPresentation.png');
+	
+	border-top: 1px;
+	border-bottom: 1px;
+	border-style: solid;
+
+	-webkit-border-image: -webkit-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;
+	-moz-border-image: -moz-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;  
+	-o-border-image: -o-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;
+	border-image: linear-gradient(to right, black, rgba(175, 99, 25, 1), black) 1 1 100%; 
+
+	background: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
+	background: -o-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1)); 
+	background: -moz-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
+	background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,1));
+
+}
+
+#contentBlock
+{
+	position: relative;
+	width: 600px;
+	height: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	background-image: url('../Image/backgroundPresentation.png');
+	
+	border-top: 1px;
+	border-bottom: 1px;
+	border-style: solid;
+	border: 1px solid red;
+	border-image: linear-gradient(90deg, black, rgba(175, 99, 25, 1), black) 1 1 100%;
+}
+
+#footer
+{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	background-image: url('../Image/background.png');
+
+	border-top: 1px;
+	border-bottom: 0px;
+	border-style: solid;
+	opacity: 0;
+
+	-webkit-border-image: -webkit-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;
+	-moz-border-image: -moz-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;  
+	-o-border-image: -o-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;
+	border-image: linear-gradient(to right, black, rgba(175, 99, 25, 1), black) 1 1 100%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+body 
+{
 	overflow-x: hidden;
 	margin: 0px;
 	background-image: url('../Image/background.png');
@@ -36,7 +269,7 @@ body
 	font-size: 16pt;
 }
 
-/* --- --- --- --- --- */
+
 
 #page
 {
@@ -77,7 +310,7 @@ body
 	border-style: dashed;
 }
 
-/* --- --- --- --- --- */
+
 
 #titleBox
 {
@@ -104,7 +337,7 @@ body
 	color: silver;
 }
 
-/* --- --- --- --- --- */
+
 
 #portrait
 {
@@ -144,3 +377,4 @@ body
 	height: 25px;
 	background-color: orange; 
 }
+*/

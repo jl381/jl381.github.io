@@ -19,15 +19,6 @@ function setGradient(value){
 	'linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,'+value+'), rgba(0,0,0,'+value+'), rgba(0,0,0,'+value+'), rgba(0,0,0,1))';
 }
 
-function rand(from,to){
-	return Math.floor(Math.random()*(to-from+1)+from);
-}
-
-function getCssProperty(elmId, property){
-   var elem = document.getElementById(elmId);
-   return window.getComputedStyle(elem,null).getPropertyValue(property);
-}
-
 function getScrollY() {
   var scrOfY = 0;
   if( typeof( window.pageYOffset ) == 'number' ) {
@@ -43,6 +34,14 @@ function getScrollY() {
   return scrOfY;
 }
 
+function rand(from,to){
+  return Math.floor(Math.random()*(to-from+1)+from);
+}
+
+function getCssProperty(elmId, property){
+   var elem = document.getElementById(elmId);
+   return window.getComputedStyle(elem,null).getPropertyValue(property);
+}
 
 
 
