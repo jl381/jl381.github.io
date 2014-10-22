@@ -93,10 +93,10 @@ body
 	-o-border-image: -o-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;
 	border-image: linear-gradient(to right, black, rgba(175, 99, 25, 1), black) 1 1 100%; 
 
-	background: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
-	background: -o-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1)); 
-	background: -moz-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
-	background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,1));
+	background: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,0.05), rgba(0,0,0,0.05), rgba(0,0,0,1));
+	background: -o-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,0.05), rgba(0,0,0,0.05), rgba(0,0,0,1)); 
+	background: -moz-linear-gradient(right, rgba(0,0,0,1), rgba(0,0,0,0.05), rgba(0,0,0,0.05), rgba(0,0,0,1));
+	background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.05), rgba(0,0,0,0.05), rgba(0,0,0,1));
 
 }
 
@@ -111,11 +111,10 @@ body
 	background-image: url('../Image/backgroundPresentation.png');
 	
 	border-top: 1px;
-	border-bottom: 1px;
 	border-style: solid;
-	/*border: 1px solid red;*/
-	border-image: url('../Image/ornament.png');
-	/*linear-gradient(90deg, black, rgba(175, 99, 25, 1), black) 1 1 100%;*/
+	border-bottom: 1px;
+	/*border: 1px solid rgba(175, 99, 25, 1);*/
+	border-image: linear-gradient(90deg, black, rgba(175, 99, 25, 1), black) 1 1 100%;
 }
 
 #footer
@@ -129,7 +128,7 @@ body
 	border-top: 1px;
 	border-bottom: 0px;
 	border-style: solid;
-	opacity: 0;
+	/*opacity: 0;*/
 
 	-webkit-border-image: -webkit-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;
 	-moz-border-image: -moz-linear-gradient(right, black, rgba(175, 99, 25, 1), black) 1 1 100%;  
