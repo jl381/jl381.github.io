@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Jurijs Levadnijs</title>
@@ -37,8 +37,16 @@
     <div id="presentationBox">
       <div id="block1">
         <div id="border">
-          <div id="leftBorder" ondrag="dragElmL(event)"></div> 
-          <div id="rightBorder" ondrag="dragElmR(event)"></div>
+          <div id="leftBorder">
+            <div class="slideBtn" id="leftArrow" onclick = "slide(event,-1)" onmouseover="arrowVisibility(1,leftArrow)" onmouseout="arrowVisibility(0,leftArrow)">
+              <img src="Image/arrow.png" alt="r" width="68" height="72">
+            </div>
+          </div> 
+          <div id="rightBorder">
+            <div class="slideBtn" id="rightArrow" onclick = "slide(event,1)" onmouseover="arrowVisibility(1,rightArrow)" onmouseout="arrowVisibility(0,rightArrow)">
+              <img src="Image/arrow.png" width="68" height="72">
+            </div>
+          </div> 
           <div id="content">
             <h1>Home</h1>
             Dear Visitor,
@@ -50,15 +58,17 @@
               <p>Jurijs Levadnijs</p>
             </div>
           </div>
+          <div id="handIcon" onmouseout="resetPosition(event)"></div>
         </div> 
       </div>
-      <div id="holder"></div>
+      <div id="grabArea" onmouseover="setVisibility(1)" onmouseout="setVisibility(0)" ondrag="dragging(event)" onmouseup="resetPosition(event)"></div>
       <div id="footer">
         <div id="text">
           © Design by <a href="#">Jurijs Levadnijs</a>, 2014
         </div>
       </div>
 
+      <div id=""></div>
       <div id=""></div>
       <div id=""></div>
       <div id=""></div>
