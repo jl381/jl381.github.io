@@ -7,18 +7,12 @@
   <meta name="description" content="" />
   <link href="CSS/index.css" rel="stylesheet" type="text/css" />  
   <link href="CSS/jquery-ui.css" rel="stylesheet">
-
-  <script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
-  <script type="text/javascript" src="Script/jquery-ui.js"></script>
-  <script type="text/javascript" src="Script/index.js"></script>
-  <script type="text/javascript" src="Script/raphael-min.js"></script>
-  <script type="text/javascript" src="Script/Shape.js"></script>
-  <script type="text/javascript" src="Script/contentDrag.js"></script>
-
-
 </head>
 <body>
 
+  <div id="hint"onmousemove="closeHint()"></div>
+
+  <div id="darkEffect" onmouseover="darkenRest(false)"></div>
   <div id="bodyBox">
 
     <div id="header">
@@ -35,31 +29,51 @@
     </div>
     
     <div id="presentationBox">
-      <div id="block1">
-        <div id="border">
-          <div id="leftBorder">
-            <div class="slideBtn" id="leftArrow" onclick = "slide(event,-1)" onmouseover="arrowVisibility(1,leftArrow)" onmouseout="arrowVisibility(0,leftArrow)">
-              <img src="Image/arrow.png" alt="r" width="68" height="72">
+      <div id="vessel">
+
+        <div id="block1">
+          <div id="glowEffect"></div>
+          <div id="border">
+            <div id="leftBorder">
+              <div class="slideBtn" id="leftArrow" onclick = "slide(event,-1)" onmouseover="arrowVisibility(1,leftArrow)" onmouseout="arrowVisibility(0,leftArrow)">
+                <img src="Image/arrow.png" alt="r" width="68" height="72">
+              </div>
+            </div> 
+            <div id="rightBorder">
+              <div class="slideBtn" id="rightArrow" onclick = "slide(event,1)" onmouseover="arrowVisibility(1,rightArrow)" onmouseout="arrowVisibility(0,rightArrow)">
+                <img src="Image/arrow.png" width="68" height="72">
+              </div>
+            </div> 
+            <div id="content" onmouseover="darkenRest(true)">
+              <h1>Home</h1>
+              Dear Visitor,
+              <p>I am pleased to welcome you on my personal web page.
+                The site contains a number of my works done in the past. This alone carries information about my skills, knowledge and creates a visibility of my capabilities.</p>
+                For a quick view, please use quick links from the window on the right.
+                <br>I hope you enjoy your visit!
+                <p>Yours sincerely,</p>
+                <p>Jurijs Levadnijs</p>
+                <canvas id="scene"></canvas>
+              </div>
             </div>
+            <div id="pageDeck">
+              <div id="pageDeckBar">
+                <li class="miniTab">
+                  <a href="#" id="start">◄</a>
+                  <a href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#" id="end">►</a>
+                </li>
+                <div id="lCorner"></div>
+                <div id="rCorner"></div>
+              </div>
+            </div>
+            <div id="handIcon" onmouseout="resetPosition(event)"></div>
           </div> 
-          <div id="rightBorder">
-            <div class="slideBtn" id="rightArrow" onclick = "slide(event,1)" onmouseover="arrowVisibility(1,rightArrow)" onmouseout="arrowVisibility(0,rightArrow)">
-              <img src="Image/arrow.png" width="68" height="72">
-            </div>
-          </div> 
-          <div id="content">
-            <h1>Home</h1>
-            Dear Visitor,
-            <p>I am pleased to welcome you on my personal web page.
-              The site contains a number of my works done in the past. This alone carries information about my skills, knowledge and creates a visibility of my capabilities.</p>
-              For a quick view, please use quick links from the window on the right.
-              <br>I hope you enjoy your visit!
-              <p>Yours sincerely,</p>
-              <p>Jurijs Levadnijs</p>
-            </div>
-          </div>
-          <div id="handIcon" onmouseout="resetPosition(event)"></div>
-        </div> 
+        </div>
       </div>
       <div id="grabArea" onmouseover="setVisibility(1)" onmouseout="setVisibility(0)" ondrag="dragging(event)" onmouseup="resetPosition(event)"></div>
       <div id="footer">
@@ -68,13 +82,9 @@
         </div>
       </div>
 
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
 
-
+      <div id=""></div>
+      <div id=""></div>
     </body>
 
     <script type = "text/javascript">
@@ -86,4 +96,12 @@
   // createAnimation();
 </script>
 
+<script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="Script/jquery-ui.js"></script>
+<script type="text/javascript" src="Script/index.js"></script>
+<script type="text/javascript" src="Script/raphael-min.js"></script>
+<script type="text/javascript" src="Script/Shape.js"></script>
+<script type="text/javascript" src="Script/contentDrag.js"></script>
+<script type="text/javascript" src="Script/mouse.js"></script>
+<script type="text/javascript" src="Script/animation.js"></script>
 </html>
