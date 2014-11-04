@@ -9,99 +9,116 @@
   <link href="CSS/jquery-ui.css" rel="stylesheet">
 </head>
 <body>
-
   <div id="hint"onmousemove="closeHint()"></div>
-
   <div id="darkEffect" onmouseover="darkenRest(false)"></div>
   <div id="bodyBox">
-
     <div id="header">
       <div id="banner"></div>
       <div id="navigationBar">   
         <li class="tabs">
-          <a href="#" id="tabStart">Home</a>
-          <a href="#">Projects</a>
-          <a href="#">Articles</a>
-          <a href="#">About</a>
-          <a href="#" id="tabEnd">Contact</a>
+          <a href="#"onclick="rollSlideTo(1)" id="tabStart">Home</a>
+          <a href="#"onclick="rollSlideTo(2)" >Articles</a>
+          <a href="#"onclick="rollSlideTo(3)" >Projects</a>
+          <a href="#"onclick="rollSlideTo(4)" >About</a>
+          <a href="#"onclick="rollSlideTo(5)" id="tabEnd">Contact</a>
         </li>
       </div>
     </div>
-    
     <div id="presentationBox">
       <div id="vessel">
-
         <div id="block1">
           <div id="glowEffect"></div>
           <div id="border">
             <div id="leftBorder">
-              <div class="slideBtn" id="leftArrow" onclick = "slide(event,-1)" onmouseover="arrowVisibility(1,leftArrow)" onmouseout="arrowVisibility(0,leftArrow)">
+              <div class="slideBtn" id="leftArrow" onclick = "autoDrag(0)" onmouseover="arrowVisibility(1,leftArrow)" onmouseout="arrowVisibility(0,leftArrow)" style="cursor:pointer">
                 <img src="Image/arrow.png" alt="r" width="68" height="72">
               </div>
             </div> 
             <div id="rightBorder">
-              <div class="slideBtn" id="rightArrow" onclick = "slide(event,1)" onmouseover="arrowVisibility(1,rightArrow)" onmouseout="arrowVisibility(0,rightArrow)">
+              <div class="slideBtn" id="rightArrow" onclick = "autoDrag(1)" onmouseover="arrowVisibility(1,rightArrow)" onmouseout="arrowVisibility(0,rightArrow)" style="cursor:pointer">
                 <img src="Image/arrow.png" width="68" height="72">
               </div>
             </div> 
-            <div id="content" onmouseover="darkenRest(true)">
-              <h1>Home</h1>
-              Dear Visitor,
-              <p>I am pleased to welcome you on my personal web page.
-                The site contains a number of my works done in the past. This alone carries information about my skills, knowledge and creates a visibility of my capabilities.</p>
-                For a quick view, please use quick links from the window on the right.
-                <br>I hope you enjoy your visit!
-                <p>Yours sincerely,</p>
-                <p>Jurijs Levadnijs</p>
-                <canvas id="scene"></canvas>
-              </div>
+            <div id="content" onmouseover="darkenRest(true)"> </div>
+          </div>
+          <div id="pageDeck">
+            <div id="pageDeckBar">
+              <li class="miniTab">
+                <a href="#" onclick="loadContentTo('text','content')" id="start">◄</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" id="end">►</a>
+              </li>
+              <div id="lCorner"></div>
+              <div id="rCorner"></div>
             </div>
-            <div id="pageDeck">
-              <div id="pageDeckBar">
-                <li class="miniTab">
-                  <a href="#" id="start">◄</a>
-                  <a href="#">1</a>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#">5</a>
-                  <a href="#" id="end">►</a>
-                </li>
-                <div id="lCorner"></div>
-                <div id="rCorner"></div>
-              </div>
-            </div>
-            <div id="handIcon" onmouseout="resetPosition(event)"></div>
-          </div> 
-        </div>
+          </div>
+          <div id="handIcon" onmouseout="resetPosition(event)"></div>
+        </div> 
       </div>
-      <div id="grabArea" onmouseover="setVisibility(1)" onmouseout="setVisibility(0)" ondrag="dragging(event)" onmouseup="resetPosition(event)"></div>
-      <div id="footer">
-        <div id="text">
-          © Design by <a href="#">Jurijs Levadnijs</a>, 2014
-        </div>
+    </div>
+    <div id="grabArea" onmouseover="setVisibility(1)" onmouseout="setVisibility(0)" ondrag="dragging(event)" onmouseup="resetPosition(event)"></div>
+    <div id="footer">
+      <div id="text">
+        © Design by <a href="#">Jurijs Levadnijs</a>, 2014
       </div>
+    </div>
+    <div id=""></div>
+    <div id=""></div>
+  </body>
 
+   <div id="Home" style="display:none">             
+     <h1>Home</h1>
+     Dear Visitor,
+     <p>I am pleased to welcome you on my personal web page.
+      The site contains a number of my works done in the past. This alone carries information about my skills, knowledge and creates a visibility of my capabilities.</p>
+      For a quick view, please use quick links from the window on the right.
+      <br>I hope you enjoy your visit!
+      <p>Yours sincerely,</p>
+      <p>Jurijs Levadnijs</p>
+      <canvas id="scene"></canvas>
+    </div>
 
-      <div id=""></div>
-      <div id=""></div>
-    </body>
+   <!-- ********************************************************************************** -->
 
-    <script type = "text/javascript">
-     // setInterval(function(){ window.location = window.location; }, 500);
-   </script>
+   <div id="Articles" style="display:none">             
+     <h1>Articles</h1>
 
-   <script type = "text/javascript">
-  // lightUp(); 
-  // createAnimation();
-</script>
+   </div>
 
-<script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="Script/jquery-ui.js"></script>
-<script type="text/javascript" src="Script/index.js"></script>
-<script type="text/javascript" src="Script/raphael-min.js"></script>
-<script type="text/javascript" src="Script/Shape.js"></script>
-<script type="text/javascript" src="Script/contentDrag.js"></script>
-<script type="text/javascript" src="Script/mouse.js"></script>
-<script type="text/javascript" src="Script/animation.js"></script>
-</html>
+    <!-- ********************************************************************************** -->
+
+    <div id="Projects" style="display:none">             
+     <h1>Projects</h1>
+
+   </div>
+
+   <!-- ********************************************************************************** -->
+
+   <div id="About" style="display:none">             
+     <h1>About</h1>
+
+   </div>
+
+   <!-- ********************************************************************************** -->
+
+   <div id="Contact" style="display:none">             
+     <h1>Contact</h1>
+
+   </div>
+
+   <!-- ********************************************************************************** -->
+
+   <script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
+   <script type="text/javascript" src="Script/jquery-ui.js"></script>
+   <script type="text/javascript" src="Script/index.js"></script>
+   <script type="text/javascript" src="Script/raphael-min.js"></script>
+   <script type="text/javascript" src="Script/Shape.js"></script>
+   <script type="text/javascript" src="Script/contentDrag.js"></script>
+   <script type="text/javascript" src="Script/mouse.js"></script>
+   <script type="text/javascript" src="Script/animation.js"></script>
+   <script type = "text/javascript">loadContentTo("Home","content");</script>
+   </html>

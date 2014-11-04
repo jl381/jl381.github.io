@@ -43,25 +43,7 @@ function getCssProperty(elmId, property){
    return window.getComputedStyle(elem,null).getPropertyValue(property);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function print(msg){ document.getElementById("mapKeys").innerHTML = msg; }
-
-// !!! DEPRECATED !!! \\
+// !!! DEECATED !!! \\
 // function lightUp()
 // {
 // 	var speed = 200, maxVis = 75, minVis = 0, A, T = maxVis, ID=0;
