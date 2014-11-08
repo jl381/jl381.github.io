@@ -9,6 +9,8 @@
   <link href="CSS/jquery-ui.css" rel="stylesheet">
 </head>
 <body>
+  <div id="test"></div>
+
   <div id="hint"onmousemove="closeHint()"></div>
   <div id="darkEffect" onmouseover="darkenRest(false)"></div>
   <div id="bodyBox">
@@ -39,7 +41,13 @@
                 <img src="Image/arrow.png" width="68" height="72">
               </div>
             </div> 
-            <div id="content" onmouseover="darkenRest(true)"> </div>
+            <div id="content" onmouseover="darkenRest(true)">
+              <!-- ------ -->
+
+
+
+              <!-- ------ -->
+            </div>
           </div>
           <div id="pageDeck">
             <div id="pageDeckBar">
@@ -66,59 +74,107 @@
         © Design by <a href="#">Jurijs Levadnijs</a>, 2014
       </div>
     </div>
+
     <div id=""></div>
-    <div id=""></div>
+
   </body>
 
-   <div id="Home" style="display:none">             
-     <h1>Home</h1>
+  <div id="Home" style="display:none">
+   <h1>Home</h1>
+   <div id="WelcomeMessage">
+    <div id="Portrait"></div>
+    <div id="Message">
      Dear Visitor,
-     <p>I am pleased to welcome you on my personal web page.
-      The site contains a number of my works done in the past. This alone carries information about my skills, knowledge and creates a visibility of my capabilities.</p>
-      For a quick view, please use quick links from the window on the right.
-      <br>I hope you enjoy your visit!
-      <p>Yours sincerely,</p>
-      <p>Jurijs Levadnijs</p>
-      <canvas id="scene"></canvas>
-    </div>
-
-   <!-- ********************************************************************************** -->
-
-   <div id="Articles" style="display:none">             
-     <h1>Articles</h1>
-
+     <p>I am pleased to warmly welcome you to my personal web site.<br>
+       <br> The site offers you a variety of data that you will find useful when looking into questions such as who I am and what my skills are. I designed the web site emphazing on usability and readability to specifically help you find these answers quickly and with ease.<br>
+       <br> However before browsing the site further, please familiarize with the figure shown below:<br>
+       <img src="Image/mapping.png">
+       <br> Other than that, I wish you an informative browsing experience.</p>
+       <p>Yours sincerely,<br>
+       Jurijs Levadnijs</p>
+       <canvas id="scene"></canvas>
+     </div>
    </div>
+ </div>
 
-    <!-- ********************************************************************************** -->
+ <!-- ********************************************************************************** -->
 
-    <div id="Projects" style="display:none">             
-     <h1>Projects</h1>
+ <div id="Articles" style="display:none">
+   <h1>Articles</h1>
 
-   </div>
+ </div>
 
-   <!-- ********************************************************************************** -->
+ <!-- ********************************************************************************** -->
 
-   <div id="About" style="display:none">             
-     <h1>About</h1>
+ <div id="Projects" style="display:none">
+   <h1>Projects</h1>
 
-   </div>
+ </div>
 
-   <!-- ********************************************************************************** -->
+ <!-- ********************************************************************************** -->
 
-   <div id="Contact" style="display:none">             
-     <h1>Contact</h1>
+ <div id="About" style="display:none">
+   <h1>About</h1>
 
-   </div>
+ </div>
 
-   <!-- ********************************************************************************** -->
+ <!-- ********************************************************************************** -->
 
-   <script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
-   <script type="text/javascript" src="Script/jquery-ui.js"></script>
-   <script type="text/javascript" src="Script/index.js"></script>
-   <script type="text/javascript" src="Script/raphael-min.js"></script>
-   <script type="text/javascript" src="Script/Shape.js"></script>
-   <script type="text/javascript" src="Script/contentDrag.js"></script>
-   <script type="text/javascript" src="Script/mouse.js"></script>
-   <script type="text/javascript" src="Script/animation.js"></script>
-   <script type = "text/javascript">loadContentTo("Home","content");</script>
-   </html>
+ <div id="Contact" style="display:none">
+   <h1>Contact</h1>
+
+ </div>
+
+ <!-- ********************************************************************************** -->
+
+ <script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
+ <script type="text/javascript" src="Script/jquery-ui.js"></script>
+ <script type="text/javascript" src="Script/index.js"></script>
+ <script type="text/javascript" src="Script/raphael-min.js"></script>
+ <script type="text/javascript" src="Script/Shape.js"></script>
+ <script type="text/javascript" src="Script/contentDrag.js"></script>
+ <script type="text/javascript" src="Script/mouse.js"></script>
+ <script type="text/javascript" src="Script/animation.js"></script>
+ <script type = "text/javascript">
+   loadContentTo("Home","content");
+ </script>
+
+ <script type = "text/javascript">
+   // setInterval(function(){ window.location = window.location; }, 1200);
+ </script>
+ </html>
+
+
+<!-- 
+
+
+
+<br> I considered using the available web technologies such as jQuery, Raphaël libraries which allowed me to script the needed code for the sake of good functionality. By maximising visual appearance of the site and its functionality, I dramatically improve some of the important aspects of the web realm - user browsing experience, content visibility and site's usability. Interface of the site should deliver you the best browsing experience, whilst keeping your concentration on the main - contents. With the design being simple it can take on a mental level complying with the human intuition as for the interractivity part.<br>
+
+
+
+
+ <br> I designed the web site using techniques to maximize user browsing experience by making an intuitive web page layout.
+       Having the web mapping visible to the user, the site functionalities immediatelly become obvious and are.
+       <br> Although the aim of this web site is to give you a summary on my profile, 
+
+       <br> I designed the appearance of the web site in a way to help visitors focus on the main source areas, as the common 
+
+
+       The web design carries out a task of helping you to find the needed piece of information quickly and without eyes getting lost.  
+
+
+       designed with a goal to give you a good visibility of myself and help you to find answers to who I am, what I can do and what I have already done. 
+
+       <br>I developed this site with a goal to give you a good introduction to myself and my capabilities as well as existing experience.
+       Despite this web project exists for the sole purpose of giving you an overview, 
+
+       <br><br>
+       Despite that this site is designed to give you an overview of myself, the web contents 
+
+       This site is designed to introduce you to the skills needed to create webpages from scratch. So if you are an aspiring Web Designer or just want to promote yourself or your interests using a website, then this is the course you will need. You will use Adobe Dreamweaver CS6, one of the most popular web design packages used by many professionals to create commercial websites. 
+
+       <br>Despite that the purpose of this site is to give you an overview of myself, I was developing it while applying accumulated experience of media and web technologies. to address common issues such as u  with a purpose of giving you an overview of myself as to help you answer questions
+
+
+        -->

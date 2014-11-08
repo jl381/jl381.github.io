@@ -120,9 +120,9 @@ function rollSlideTo(value){
   targetPage = value;
   if(currentPage == targetPage)return;
   if(currentPage < targetPage) 
-    autoDrag(0,33,"easeInQuint","easeOutQuint",targetPage);
+    autoDrag(0,169,"easeInQuint","easeOutQuint",targetPage);
   else 
-    autoDrag(1,33,"easeInQuint","easeOutQuint",targetPage);
+    autoDrag(1,169,"easeInQuint","easeOutQuint",targetPage);
 }
 
 // setInterval(function(){ p(pages[currentPage] + " }{ " + pages[targetPage]); }, 120);

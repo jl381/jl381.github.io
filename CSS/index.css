@@ -330,7 +330,7 @@ body {
 	background: -moz-linear-gradient(right, rgba(175, 99, 25, 1), rgba(250,208,1,1));
 	background: linear-gradient(0deg, rgba(20,15,0,.5), rgba(0,0,0,0) ,rgba(0,0,0,0) );
 
-	/*border-radius: 0 0 100% 100%;*/
+	border-radius: 100%;
 }
 
 #footer{
@@ -383,7 +383,94 @@ body {
 /*   -----------------------------------------------------------------------------------------------------------------  */
 /*   ---------                                           HOME                                       ------------------  */
 
+#WelcomeMessage{
+	position: relative;
 
+	/* Area */
+	width: 860px;
+	height: 200px;
+
+	/* Positioning */
+	float: none;
+	left: 0px;
+	right: 0px;
+	
+	/* Up Right Down Left */
+	margin: 10px 10px 10px 10px; 
+	padding: 0px 0px 0px 0px;
+
+	/* Borders */
+	/*border: 1px;*/
+	/*border-style: solid;*/
+	border-radius: 0%;
+
+	/* Text */
+	font-size: 10pt;
+
+	/* Colors */
+	/*background-color: #241b0d;*/
+	/*border-color: #c58005;*/
+	color: rgba(175, 99, 25, 1);
+}
+
+#Portrait{
+	position: relative;
+
+	/* Area */
+	width: 135px;
+	height: 180px;
+
+	/* Positioning */
+	float: left;
+	left: 0px;
+	right: 0px;
+	
+	/* Up Right Down Left */
+	margin: 10px; 
+	padding: 0px;
+
+	/* Colors */
+	background-image: url("../Image/portrait.png");
+}
+
+#Message{
+	position: relative;
+
+	/* Area */
+	width: 663px; /* remember about borders*/
+	height: 120px;
+
+	/* Positioning */
+	float: left;
+	left: 0px;
+	right: 0px;
+	
+	/* Up Right Down Left */
+	margin: 30px 10px 0px 10px; 
+	padding: 10px;
+
+	/* Borders */
+	border: 1px;
+	border-style: solid;
+	border-radius: 0%;
+
+	/* Text */
+	font-size: 11pt;
+
+	/* Colors */
+	background-color: rgba(36,27,13,.05);
+	border-color: rgba(197,128,5,.1);
+	color: rgba(175, 99, 25, 1);
+}
+
+#Message img{
+	position: relative;
+	width: 400px;
+	height: 300px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	margin: 20px 0px 20px 0px;
+}
 
 
 
@@ -413,7 +500,6 @@ body {
 
 /*   -----------------------------------------------------------------------------------------------------------------  */
 /*   ---------                                           CONTACT                                    ------------------  */
-
 
 
 
