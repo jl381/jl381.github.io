@@ -474,7 +474,9 @@ body {
 #UnderConstruction{
 	width: 890px;
 	height: 700px;
-	background-image: url("../Image/notready.png");
+	text-align: center;
+	margin-top: 200px;
+	font-size: 32pt;
 }
 
 
