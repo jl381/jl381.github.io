@@ -81,12 +81,12 @@ function setVisibility(value) {
   resetPosition("onmouseout");
   var x = Math.abs(parseInt(document.getElementById("block1").style.left));
   if(x < -border || x > border){}else{
-    $("#handIcon").animate({opacity: value},25,"easeInCirc");
-    $("#grabArea").animate({opacity: value},25,"easeInCirc");
+    $("#handIcon").animate({opacity: value},100,"easeInCirc");
+    $("#grabArea").animate({opacity: value},100,"easeInCirc");
   }
 }
 
-function arrowVisibility(value, id){;$("#"+id.id).animate({opacity: value},25,"easeInCirc");}
+function arrowVisibility(value, id){$("#"+id.id).animate({opacity: value},100,"linear");}
 
 function p(msg){  document.getElementById("text").innerHTML =  msg;}
 
