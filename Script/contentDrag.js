@@ -96,24 +96,36 @@ function darkenRest(state) {
       $("#darkEffect").animate({opacity: 1},325,"easeOutCirc");
       document.getElementById("leftBorder").style.visibility = "hidden";
       document.getElementById("rightBorder").style.visibility = "hidden";
-      document.getElementById("pageDeck").style.visibility = "visible";
       document.getElementById("darkEffect").style.visibility = "visible";
       document.getElementById("leftArrow").style.visibility = "hidden";
       document.getElementById("rightArrow").style.visibility = "hidden";
       document.getElementById("grabArea").style.visibility = "hidden";
+      if(activatePageDeck){
+        document.getElementById("pageDeck").style.visibility = "visible";
+        document.getElementById("content").querySelector("h2").style.opacity = .75;
+      }
+      else
+      {
+        document.getElementById("content").querySelector("h2").style.opacity = 0;
+      }
     }
     else{
       $("#darkEffect").animate({opacity: 0},1,"easeOutCirc");
       document.getElementById("leftBorder").style.visibility = "visible";
       document.getElementById("rightBorder").style.visibility = "visible";
-      document.getElementById("pageDeck").style.visibility = "hidden";
       document.getElementById("darkEffect").style.visibility = "hidden";
       document.getElementById("leftArrow").style.visibility = "visible";
       document.getElementById("rightArrow").style.visibility = "visible";
       document.getElementById("grabArea").style.visibility = "visible";
+      document.getElementById("pageDeck").style.visibility = "hidden";
+      document.getElementById("content").querySelector("h2").style.opacity = .05;
     }
   }
 }
+
+// CHANGE THE BELOW TO ALLOW OR NOT THE DECK FOR EXTRA PAGES
+var activatePageDeck = false;
+// *********************************************************
 
 var targetPage = 1;
 function rollSlideTo(value){
@@ -125,12 +137,11 @@ function rollSlideTo(value){
     autoDrag(1,169,"easeInQuint","easeOutQuint",targetPage);
 }
 
-// setInterval(function(){ p(pages[currentPage] + " }{ " + pages[targetPage]); }, 120);
-
 var 
 maxPages = 5, 
 currentPage = 1, 
 pages = ["dummyID","Home","Articles","Projects","About","Contact"];
+pageSubs = ["dummyID","HomeDeck","ArticlesDeck","ProjectsDeck","AboutDeck","ContactDeck"];
 
 function changePage(value){
   currentPage += value; 
@@ -145,12 +156,17 @@ function loadContentTo(pageID,container){
   var temp = pages.indexOf(""+pageID);
   if(-1 != temp)currentPage = temp;
   document.getElementById(container).innerHTML = document.getElementById(pageID).innerHTML;
+
+  var deck = pageSubs[pages.indexOf(""+pageID)];
+  document.getElementById("pageDeckBar").innerHTML = document.getElementById(deck).innerHTML;
+
+  // if(pageID == "Contact"){createAnimation("contactEffect", 30);}
 }
 
-$(window).click(function(e) {
-  var x = e.clientX, y = e.clientY,
-  elementMouseIsOver = document.elementFromPoint(x, y);
-    // document.getElementById(elementMouseIsOver.id).style.backgroundColor = "rgba(15,10,5,.9)";
-    // document.getElementById("content").innerHTML = document.getElementById("Home").innerHTML;
-    // p(elementMouseIsOver.id);
-  });
+// $(window).click(function(e) {
+//   var x = e.clientX, y = e.clientY,
+//   elementMouseIsOver = document.elementFromPoint(x, y);
+//     // document.getElementById(elementMouseIsOver.id).style.backgroundColor = "rgba(15,10,5,.9)";
+//     // document.getElementById("content").innerHTML = document.getElementById("Home").innerHTML;
+//     // p(elementMouseIsOver.id);
+//   });

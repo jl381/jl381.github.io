@@ -43,25 +43,11 @@
             </div> 
             <div id="content" onmouseover="darkenRest(true)">
               <!-- ------ -->
-
-
-
-              <!-- ------ -->
             </div>
           </div>
           <div id="pageDeck">
             <div id="pageDeckBar">
-              <li class="miniTab">
-                <a href="#" onclick="loadContentTo('text','content')" id="start">◄</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#" id="end">►</a>
-              </li>
-              <div id="lCorner"></div>
-              <div id="rCorner"></div>
+              <!-- ------ -->
             </div>
           </div>
           <div id="handIcon" onmouseout="resetPosition(event)"></div>
@@ -79,102 +65,185 @@
 
   </body>
 
+  <!-- ********************************************************************************** -->
+
   <div id="Home" style="display:none">
    <h1>Home</h1>
-   <div id="WelcomeMessage">
+   <div id="pageContent">
     <div id="Portrait"></div>
-    <div id="Message">
-     Dear Visitor,
-     <p>I am pleased to warmly welcome you to my personal web site.<br>
-       <br> The site offers you a variety of data that you will find useful when looking into questions such as who I am and what my skills are. I designed the web site emphazing on usability and readability to specifically help you find these answers quickly and with ease.<br>
-       <br> However before browsing the site further, please familiarize with the figure shown below:<br>
-       <img src="Image/mapping.png">
+    <div id="MessageContent-1">
+      Dear Visitor,
+      <p>I am pleased to warmly welcome you to my personal web site.<br>
+       <br> The site offers you a variety of data that you will find useful when looking into questions such as who I am and what my skills are. I designed the web site emphazing on usability and readability to specifically help you finding these answers quickly and with ease.<br>
+       <br> However, before any further browsing on the site, please familiarize with the figure shown below.<br>
        <br> Other than that, I wish you an informative browsing experience.</p>
        <p>Yours sincerely,<br>
-       Jurijs Levadnijs</p>
+         Jurijs Levadnijs</p>
+       </div>
        <canvas id="scene"></canvas>
-     </div>
-   </div>
- </div>
+       <div id="MessageContent-2">
+        <div class="bCircle">1</div>- A standard navigation bar for quick and objective browsing
+        <br><br>
+        <div class="bCircle">2</div>- Additional "Next & Previous" slide navigation buttons
+        <br><br>
+        <div class="bCircle">3</div>- A modern method for "Click & Drag" navigation
+        <br><br>
+        <div class="bCircle">4</div>- Screen dims upon cursor pointing at the content area
+        <br><br>
+        <div class="bCircle">5</div>- Sub-navigation bar for pages needing extra space
+        <br><br>
+        <div class="bCircle">6</div>- JavaScript, CSS, HTML, X3DOM, Flash are used to show contents
+        <br><br>
+        <div class="bCircle">7</div>- Photoshop was used to create design elements for the site
+        <br><br>
+        <div class="bCircle">8</div>- JavaScript Libraries used: jQuery, Raphaël
+      </div>
+    </div>
+    <h2>Home</h2>
+  </div>
 
- <!-- ********************************************************************************** -->
+  <div id="HomeDeck" style="display:none">
+    <li class="miniTab">
+      <a id="start"></a>
+      <a></a>
+      <a></a>
+      <a></a>
+      <a></a>
+      <a></a>
+      <a id="end"></a>
+    </li>
+    <div id="lCorner"></div>
+    <div id="rCorner"></div>
+  </div>
 
- <div id="Articles" style="display:none">
+  <!-- ********************************************************************************** -->
+
+  <div id="Articles" style="display:none">
    <h1>Articles</h1>
-
+   <div id="UnderConstruction"></div>
+   <h2>Articles</h2>
  </div>
 
- <!-- ********************************************************************************** -->
+ <div id="ArticlesDeck" style="display:none">
+  <li class="miniTab">
+    <a id="start"></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a id="end"></a>
+  </li>
+  <div id="lCorner"></div>
+  <div id="rCorner"></div>
+</div>
 
- <div id="Projects" style="display:none">
-   <h1>Projects</h1>
+<!-- ********************************************************************************** -->
 
- </div>
+<div id="Projects" style="display:none">
+ <h1>Projects</h1>
+ <h2>Projects</h2>
+</div>
 
- <!-- ********************************************************************************** -->
+<div id="ProjectsDeck" style="display:none">
+  <li class="miniTab">
+    <a id="start"></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a id="end"></a>
+  </li>
+  <div id="lCorner"></div>
+  <div id="rCorner"></div>
+</div>
 
- <div id="About" style="display:none">
-   <h1>About</h1>
+<!-- ********************************************************************************** -->
 
- </div>
+<div id="About" style="display:none">
+ <h1>About</h1>
+ <h2>About</h2>
+</div>
 
- <!-- ********************************************************************************** -->
+<div id="AboutDeck" style="display:none">
+  <li class="miniTab">
+    <a id="start"></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a id="end"></a>
+  </li>
+  <div id="lCorner"></div>
+  <div id="rCorner"></div>
+</div>
 
- <div id="Contact" style="display:none">
-   <h1>Contact</h1>
+<!-- ********************************************************************************** -->
 
- </div>
+<div id="Contact" style="display:none">
+ <h1>Contact</h1>
+ <div id="contactImg"></div>
+ <div id="contactContent">
+  <h3>Extras</h3>
+  <!-- <img src="https://fbstatic-a.akamaihd.net/rsrc.php/yl/r/H3nktOa7ZMg.ico" width="16px" height="16px"> Unavailable<br> -->
 
- <!-- ********************************************************************************** -->
+  <img src="https://pages.github.com/favicon.ico" width="16px" height="16px">
+   Link: <a href=" ">jl381.github.io</a><br>
 
- <script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
- <script type="text/javascript" src="Script/jquery-ui.js"></script>
- <script type="text/javascript" src="Script/index.js"></script>
- <script type="text/javascript" src="Script/raphael-min.js"></script>
- <script type="text/javascript" src="Script/Shape.js"></script>
- <script type="text/javascript" src="Script/contentDrag.js"></script>
- <script type="text/javascript" src="Script/mouse.js"></script>
- <script type="text/javascript" src="Script/animation.js"></script>
- <script type = "text/javascript">
-   loadContentTo("Home","content");
- </script>
+  <img src="https://static.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico" width="16px" height="16px">
+   Link: <a href="http://nl.linkedin.com/pub/jurijs-levadnijs/a1/a48/477">view profile</a><br>
 
- <script type = "text/javascript">
-   // setInterval(function(){ window.location = window.location; }, 1200);
- </script>
- </html>
+  <img src="http://s.uicdn.com/gmx.com/3.3/img/favicon.ico" width="16px" height="16px">
+   Email: <a>jurijs1204@gmx.com</a><br>
 
+  <img src="https://a.gfx.ms/OLFav.ico" width="16px" height="16px">
+   Email: <a>segara69@hotmail.com</a><br>
 
-<!-- 
+  <br><h3>Message</h3>
+  <form action="MAILTO:segara69@hotmail.com" method="post" enctype="text/plain">
+    Name:
+    <input type="text" name="name" placeholder="Your name"><br><br>
+    Email:
+    <input type="text" name="mail" placeholder="Your e-mail"><br><br>
+    <textarea rows="15" cols="50"></textarea><br><br>
+    <input type="submit" value="Send">
+    <input type="reset" value="Reset">
+  </form>
 
-
-
-<br> I considered using the available web technologies such as jQuery, Raphaël libraries which allowed me to script the needed code for the sake of good functionality. By maximising visual appearance of the site and its functionality, I dramatically improve some of the important aspects of the web realm - user browsing experience, content visibility and site's usability. Interface of the site should deliver you the best browsing experience, whilst keeping your concentration on the main - contents. With the design being simple it can take on a mental level complying with the human intuition as for the interractivity part.<br>
-
-
-
-
- <br> I designed the web site using techniques to maximize user browsing experience by making an intuitive web page layout.
-       Having the web mapping visible to the user, the site functionalities immediatelly become obvious and are.
-       <br> Although the aim of this web site is to give you a summary on my profile, 
-
-       <br> I designed the appearance of the web site in a way to help visitors focus on the main source areas, as the common 
-
-
-       The web design carries out a task of helping you to find the needed piece of information quickly and without eyes getting lost.  
-
-
-       designed with a goal to give you a good visibility of myself and help you to find answers to who I am, what I can do and what I have already done. 
-
-       <br>I developed this site with a goal to give you a good introduction to myself and my capabilities as well as existing experience.
-       Despite this web project exists for the sole purpose of giving you an overview, 
-
-       <br><br>
-       Despite that this site is designed to give you an overview of myself, the web contents 
-
-       This site is designed to introduce you to the skills needed to create webpages from scratch. So if you are an aspiring Web Designer or just want to promote yourself or your interests using a website, then this is the course you will need. You will use Adobe Dreamweaver CS6, one of the most popular web design packages used by many professionals to create commercial websites. 
-
-       <br>Despite that the purpose of this site is to give you an overview of myself, I was developing it while applying accumulated experience of media and web technologies. to address common issues such as u  with a purpose of giving you an overview of myself as to help you answer questions
+</div>
+<h2>Contact</h2>
+</div>
 
 
-        -->
+<div id="ContactDeck" style="display:none">
+  <li class="miniTab">
+    <a id="start"></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a id="end"></a>
+  </li>
+  <div id="lCorner"></div>
+  <div id="rCorner"></div>
+</div>
+
+<!-- ********************************************************************************** -->
+
+<script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="Script/jquery-ui.js"></script>
+<script type="text/javascript" src="Script/index.js"></script>
+<script type="text/javascript" src="Script/raphael-min.js"></script>
+<script type="text/javascript" src="Script/Shape.js"></script>
+<script type="text/javascript" src="Script/contentDrag.js"></script>
+<!-- <script type="text/javascript" src="Script/mouse.js"></script> -->
+<script type="text/javascript" src="Script/animation.js"></script>
+<script type = "text/javascript">
+ loadContentTo("Home","content");
+  // setInterval(function(){ window.location = window.location; }, 1200);
+  // createAnimation("sFX", 10);
+</script>
+</html>

@@ -1,25 +1,33 @@
  // Global variables
- var div = "backImage";
- var paper = Raphael(div);
+ var div = "-";
+ var paper = "-";
  var shapeArray = [];
- var borderMean = 100;
- var sMIN = 10, sMAX = 30;
- var shapeAmonut = 20;
+ var borderMean = 50;
+ var sMIN = 2, sMAX = 10;
+ var shapeAmonut = 30;
+
+ var refreshRate = 20;
+ var shapeAmonut = 30;
 
 // The function starts up the whole animation process: creates paper, creates shapes, creates function-check like act
-function createAnimation()
+function createAnimation(ID, amount)
 {
+  div = ID;
+  paper = Raphael(div);
+  shapeAmonut = amount;
   paper.rect(div, 0, 0).attr({"fill-opacity": 0, "stroke-opacity": 1, "stroke-color": "#ffffff"});
   adjustPaper();
 
   for (var i = 0; i < shapeAmonut; i++) { shapeArray[shapeArray.length] = new Shape();};
     setInterval(function(){act();}, 50);
-  setInterval(function(){acto();}, 5000/shapeAmonut);
+  setInterval(function(){acto();}, refreshRate);
 }
 
 function acto(){
+  var s2d = rand(sMIN,sMAX);
   var shape = shapeArray[rand(0,shapeArray.length)];
   shape.obj.attr({fill: randColor()});
+        shape.obj.animate({"width": s2d, "height": s2d}, 250, "bounce");
 }
 
 function adjustPaper()
@@ -34,7 +42,7 @@ function adjustPaper()
 var Shape = function()
 {
   // Direction doesn't change
-  this.direction = rand(1,2);
+  this.direction = rand(1,250);
   // Draw a shape on paper: Shape object, squareSide, position X, is it the first time it gets drawn?
   drawShape(this, rand(sMIN,sMAX), rand(125, paper.width-125), true);
 }  
@@ -46,7 +54,7 @@ function drawShape(shape, shapeWidth, posX, firstTime)
   shape.distance = 0; 
 
   // speed, the higher the divisor, the slower shape will when moving
-  var speed = 1/rand(1, 1000);
+  var speed = 1/rand(1, 2);
 
   // opacity gets randomized each time shape is drawn
   var opacity = rand(20,60)*0.01;
@@ -62,7 +70,7 @@ function drawShape(shape, shapeWidth, posX, firstTime)
     shape.distance = paper.width - shapeWidth;
 
     // This is where the adjustments happen
-    shape.obj.attr({"x": posX, "y": rand(0,paper.height - shapeWidth), "width": shapeWidth, "height": shapeWidth});
+    shape.obj.attr({"x": posX, "y": rand(0,paper.height - sMAX), "width": shapeWidth, "height": shapeWidth});
 
     // Adjusts extra stuff, color and opacity
     shape.obj.attr({fill: randColor(), 'fill-opacity': 0});
@@ -70,19 +78,19 @@ function drawShape(shape, shapeWidth, posX, firstTime)
   else
   {
     // This creates another vector graphics using the given data
-    shape.obj = paper.rect( posX, rand(0,paper.height - shapeWidth), shapeWidth, shapeWidth);
+    shape.obj = paper.rect( posX, rand(0,paper.height - sMAX), shapeWidth, shapeWidth);
 
     // shape.obj.transform("r"+rand(0,360));
     // Adjusts extra stuff, color and opacity
     shape.obj.attr({fill: randColor(), 'fill-opacity': opacity, 'stroke-opacity': 0.25})
-    .mouseout(
-      function () 
-      {
-        var s2d = rand(10,30);
-        shape.obj.animate({"width": s2d, "height": s2d}, 1000, "bounce");
-      }
-      )
-    ;
+    // .mouseout(
+    //   function () 
+    //   {
+    //     var s2d = rand(10,30);
+    //     shape.obj.animate({"width": s2d, "height": s2d}, 250, "bounce");
+    //   }
+    //   )
+    // ;
   }
 
 
