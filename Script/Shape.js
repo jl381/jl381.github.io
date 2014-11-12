@@ -42,7 +42,7 @@ function adjustPaper()
 var Shape = function()
 {
   // Direction doesn't change
-  this.direction = rand(1,250);
+  this.direction = rand(1,2);
   // Draw a shape on paper: Shape object, squareSide, position X, is it the first time it gets drawn?
   drawShape(this, rand(sMIN,sMAX), rand(125, paper.width-125), true);
 }  

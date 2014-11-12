@@ -13,7 +13,7 @@ setInterval(function(){
   previousMouseX = currentMouseX; 
   previousMouseY = currentMouseY;
   p(ticks);
-}, 200);
+}, 300);
 
 $(window).mousemove(function(e) {
   currentMouseX = e.clientX; 
