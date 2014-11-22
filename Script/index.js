@@ -3,6 +3,8 @@ window.onresize = function()
 
 }
 
+
+
 window.onscroll = function()
 {
 	setGradient(1 - getScrollY()/(document.body.clientHeight-window.innerHeight));
@@ -39,8 +41,8 @@ function rand(from,to){
 }
 
 function getCssProperty(elmId, property){
-   var elem = document.getElementById(elmId);
-   return window.getComputedStyle(elem,null).getPropertyValue(property);
+ var elem = document.getElementById(elmId);
+ return window.getComputedStyle(elem,null).getPropertyValue(property);
 }
 
 // !!! DEECATED !!! \\

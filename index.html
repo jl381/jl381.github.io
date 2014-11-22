@@ -12,6 +12,7 @@
   <div id="test"></div>
 
   <div id="hint"onmousemove="closeHint()"></div>
+
   <div id="darkEffect" onmouseover="darkenRest(false)"></div>
   <div id="bodyBox">
     <div id="header">
@@ -27,27 +28,47 @@
       </div>
     </div>
     <div id="presentationBox">
-      <div id="vessel">
-        <div id="block1">
-          <div id="glowEffect"></div>
-          <div id="border">
-            <div id="leftBorder">
-              <div class="slideBtn" id="leftArrow" onclick = "autoDrag(0)" onmouseover="arrowVisibility(1,leftArrow)" onmouseout="arrowVisibility(0,leftArrow)" style="cursor:pointer"></div>
-            </div> 
-            <div id="rightBorder">
-              <div class="slideBtn" id="rightArrow" onclick = "autoDrag(1)" onmouseover="arrowVisibility(1,rightArrow)" onmouseout="arrowVisibility(0,rightArrow)" style="cursor:pointer"></div>
-            </div> 
-            <div id="content" onmouseover="darkenRest(true)">
-              <!-- ------ -->
-            </div>
+      <div id="slide">
+        <div id="glowEffect"></div>
+        <div id="border">
+          <div id="leftBorder">
+            <div class="slideBtn" id="leftArrow" style="cursor:pointer"
+            onclick = "autoDrag(0)" 
+            onmouseover="arrowVisibility(1,leftArrow);summonHint(1,leftArrow);" 
+            onmouseout="arrowVisibility(0,leftArrow);summonHint(0,leftArrow);" 
+            ></div>
+          </div> 
+
+          <div id="rightBorder">
+            <div class="slideBtn" id="rightArrow" style="cursor:pointer"
+            onclick = "autoDrag(1)" 
+            onmouseover="arrowVisibility(1,rightArrow);summonHint(1,rightArrow);" 
+            onmouseout="arrowVisibility(0,rightArrow);summonHint(0,rightArrow);" 
+            ></div>
+
           </div>
+
+          <div id="content" onmouseover="darkenRest(true)">
+            <!-- ------ -->
+          </div>
+
+          <div class="helper" id="leftArrowHelper"><a></a></div>
+          <div class="helper" id="rightArrowHelper"></div>
+
           <div id="pageDeck">
             <div id="pageDeckBar">
               <!-- ------ -->
             </div>
           </div>
           <div id="handIcon" onmouseout="resetPosition(event)"></div>
+
+
+
         </div> 
+
+        <div class="subs" id="leftArrow-sub"><a>Projects</a></div>
+        <div class="subs" id="rightArrow-sub"><a>Home</a></div>
+
       </div>
     </div>
     <div id="grabArea" onmouseover="setVisibility(1)" onmouseout="setVisibility(0)" ondrag="dragging(event)" onmouseup="resetPosition(event)"></div>
@@ -116,7 +137,9 @@
 
   <div id="Articles" style="display:none">
    <h1>Articles</h1><div id="sFX"></div>
-   <div id="UnderConstruction"><p>The contents for this page are being prepared.<br><br> Check back later.<br><br>Thanks!</p></div>
+   <div id="pageContent">
+     <div id="UnderConstruction"><p>The contents for this page are being prepared.<br><br> Check back later.<br><br>Thanks!</p></div>
+   </div>
    <h2>Articles</h2>
  </div>
 
@@ -138,13 +161,55 @@
 
 <div id="Projects" style="display:none">
  <h1>Projects</h1>
- <h2>Projects</h2>
+ <div id="pageContent">
+   <li id="projectBar">
+    <a onclick="projectCategorySelection(id)" id="Software">Software</a>   
+    <a onclick="projectCategorySelection(id)" id="Media">Media</a>
+    <a onclick="projectCategorySelection(id)" id="3D Works">3D Works</a>
+    <a onclick="projectCategorySelection(id)" id="Web sites">Web sites</a>
+    <a onclick="projectCategorySelection(id)" id="Other">Other</a>
+  </li>
+
+  <div id="projectTable">
+    <div id="projectListingArea">
+      <!-- ------------ -->        
+      <li>
+        <div class="projectListItem"><a>Name of the project</a></div>
+        <div class="projectListItem"><a>Name of the project</a></div>
+        <div class="projectListItem"><a>Name of the project</a></div>
+        <div class="projectListItem"><a>Name of the project</a></div>
+        <div class="projectListItem"><a>Name of the project</a></div>
+        <div class="projectListItem"><a>Name of the project</a></div>
+        <div class="projectListItem"><a>Name of the project</a></div>
+        <div class="projectListItem"><a>Name of the project</a></div>
+        <div class="projectListItem"><a>Name of the project</a></div>
+      </li>
+    </div>
+    <div id="projectListingID">Software Projects</div>
+    <div id="pageBox">
+      <div id="pageBank">
+        <div class="pageClass" id="1"></div>
+        <div class="pageClass" id="2"></div>
+        <div class="pageClass" id="3"></div>
+        <div class="pageClass" id="4"></div>
+        <div class="pageClass" id="5"></div>
+        <div class="pageClass" id="6"></div>
+        <div class="pageClass" id="7"></div>
+        <div class="pageClass" id="8"></div>
+        <div class="pageClass" id="9"></div>
+        <div class="pageClass" id="10"></div>
+      </div>
+    </div>
+    <div id="btnT1" onclick="turnPage(2)"></div>
+    <div id="btnT2" onclick="turnPage(1)"></div>
+  </div>
+</div>
+<h2>Projects</h2>
 </div>
 
 <div id="ProjectsDeck" style="display:none">
   <li class="miniTab">
     <a id="start"></a>
-    <a></a>
     <a></a>
     <a></a>
     <a></a>
@@ -180,35 +245,38 @@
 
 <div id="Contact" style="display:none">
  <h1>Contact</h1>
- <div id="contactImg"></div>
- <div id="contactContent">
-  <h3>Extras</h3>
-  <!-- <img src="https://fbstatic-a.akamaihd.net/rsrc.php/yl/r/H3nktOa7ZMg.ico" width="16px" height="16px"> Unavailable<br> -->
+ <div id="pageContent">
+   <div id="contactImg"></div>
+   <div id="contactContent">
+    <h3>Extras</h3>
+    <!-- <img src="https://fbstatic-a.akamaihd.net/rsrc.php/yl/r/H3nktOa7ZMg.ico" width="16px" height="16px"> Unavailable<br> -->
 
-  <img src="https://pages.github.com/favicon.ico" width="16px" height="16px">
-   Link: <a href=" ">jl381.github.io</a><br>
+    <img src="https://pages.github.com/favicon.ico" width="16px" height="16px">
+    Link: <a href=" ">jl381.github.io</a><br>
 
-  <img src="https://static.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico" width="16px" height="16px">
-   Link: <a href="http://nl.linkedin.com/pub/jurijs-levadnijs/a1/a48/477">view profile</a><br>
+    <img src="https://static.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico" width="16px" height="16px">
+    Link: <a href="http://nl.linkedin.com/pub/jurijs-levadnijs/a1/a48/477">view profile</a><br>
 
-  <img src="http://s.uicdn.com/gmx.com/3.3/img/favicon.ico" width="16px" height="16px">
-   Email: <a>jurijs1204@gmx.com</a><br>
+    <img src="http://s.uicdn.com/gmx.com/3.3/img/favicon.ico" width="16px" height="16px">
+    Email: <a>jurijs1204@gmx.com</a><br>
 
-  <img src="https://a.gfx.ms/OLFav.ico" width="16px" height="16px">
-   Email: <a>segara69@hotmail.com</a><br>
+    <img src="https://a.gfx.ms/OLFav.ico" width="16px" height="16px">
+    Email: <a>segara69@hotmail.com</a><br>
 
-  <br><h3>Message</h3>
-  <form action="MAILTO:segara69@hotmail.com" method="post" enctype="text/plain">
-    Name:
-    <input type="text" name="name" placeholder="Your name"><br><br>
-    Email:
-    <input type="text" name="mail" placeholder="Your e-mail"><br><br>
-    <textarea rows="15" cols="50"></textarea><br><br>
+    <br><h3>Message:
     <input type="submit" value="Send">
-    <input type="reset" value="Reset">
-  </form>
+    <input type="reset" value="Reset"></h3>
+    <form action="MAILTO:segara69@hotmail.com" method="post" enctype="text/plain">
+      Name:
+      <input type="text" name="name" placeholder="Your name"><br><br>
+      Email:
+      <input type="text" name="mail" placeholder="Your e-mail"><br><br>
+      <textarea rows="20" cols="45"></textarea><br><br>
+    </form>
 
+  </div>
 </div>
+
 <h2>Contact</h2>
 </div>
 
@@ -235,10 +303,11 @@
 <script type="text/javascript" src="Script/raphael-min.js"></script>
 <!-- <script type="text/javascript" src="Script/Shape.js"></script> -->
 <script type="text/javascript" src="Script/contentDrag.js"></script>
-<script type="text/javascript" src="Script/mouse.js"></script>
+<!-- <script type="text/javascript" src="Script/mouse.js"></script> -->
 <script type="text/javascript" src="Script/animation.js"></script>
+<script type="text/javascript" src="Script/projectPage.js"></script>
 <script type = "text/javascript">
- loadContentTo("Articles","content");
+  loadContentTo("Home","content");
   // setInterval(function(){ window.location = window.location; }, 1200);
   // createAnimation("presentationBox", 50);
 </script>
