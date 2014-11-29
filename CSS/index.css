@@ -132,9 +132,9 @@ body {
 }
 
 #pageDeck{
-	visibility: hidden;
+	/*visibility: hidden;/////////////////////////////////////////////////////////*/
 	position: absolute;
-	width: 100%;
+	width: 898px;
 	height: 70px;
 	border-top: 0px;
 	border-left: 0px;
@@ -143,19 +143,18 @@ body {
 	border-style: dashed;
 	border-color: rgba(175, 99, 25, .75);
 	border-radius: 0% 0% 100% 100%;
+	/*background-color: red;*/
 }
 
 #pageDeckBar{
+	position: relative;
 	list-style: none;
-	width: 357px;
-	height: 40px;
+	width: auto;
+	/*width: 609px;*/
+	height: 60px;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-#lCorner{
-	float: left;
-	margin-left: -125px;
+	/*background-color: white;*/
 }
 
 #rCorner{
@@ -169,7 +168,27 @@ body {
 	-ms-filter: "FlipH";
 }
 
-#lCorner, #rCorner{	margin-top: -30px;width: 126px; height: 60px; background-image: url('../Image/corner.png');}
+#lCorner{	
+	float: left;
+	margin-left: -125px;
+}
+
+#lCorner, #rCorner{	
+	position: relative;
+	width: 125px; 
+	height: 60px; 
+	background-image: url('../Image/corner.png');
+}
+
+#pageDeckBar li {
+	position: relative;
+	float: left;
+	width: auto;
+	height: 60px;
+	left: 50%;
+	transform: translate( -50%, 0%);
+	/*background-color: purple;*/
+}
 
 .miniTab a {
 	float: left;
@@ -186,6 +205,7 @@ body {
 	background: -o-linear-gradient(right, rgba(175, 99, 25, 1), rgba(250,208,1,1)); 
 	background: -moz-linear-gradient(right, rgba(175, 99, 25, 1), rgba(250,208,1,1));
 	background: linear-gradient(180deg, rgba(175, 99, 25, 1), rgba(250,208,1,1) );
+	cursor: pointer;
 }
 
 .miniTab a:hover{
@@ -706,7 +726,7 @@ body {
 	border: 1px;
 	border-color: white;
 	border-style: solid;
-	background-color: gray;
+	/*background-color: gray;*/
 /*	top:50%;
 	left:50%;
 	transform: translate(-50%,-80%);*/
@@ -716,7 +736,7 @@ body {
 	position: relative;
 	width: 892px;
 	height: auto;
-	background-color: orange;
+	/*background-color: orange;*/
 }
 
 .pageClass{
@@ -728,41 +748,10 @@ body {
 	text-align: center;
 	font-size: 20pt;
 	color: white;
-	background: -webkit-linear-gradient(left, rgba(175, 99, 25, 1), rgba(250,208,1,1));
-	background: -o-linear-gradient(right, rgba(175, 99, 25, 1), rgba(250,208,1,1)); 
-	background: -moz-linear-gradient(right, rgba(175, 99, 25, 1), rgba(250,208,1,1));
-	background: linear-gradient(0deg, rgba(175, 99, 25, 1), rgba(250,208,1,1) );
+	background: linear-gradient(0deg, rgba(175, 99, 25, .51), rgba(250,208,1,.51) );
+	/*background-color: black;*/
 }
 
-#btnT1{
-	position: relative;
-	width: 50px;
-	height: 50px;
-	left: 725px;
-	top: -175px;
-	background: url("../Image/btnArrowInactive.png") no-repeat;
-
-	-moz-transform: scaleY(-1);
-	-o-transform: scaleY(-1);
-	-webkit-transform: scaleY(-1);
-	transform: scaleY(-1);
-	filter: FlipV;
-	-ms-filter: "FlipV";
-}
-
-#btnT2{
-	position: relative;
-	width: 50px;
-	height: 50px;
-	left: 725px;
-	top: -175px;
-	background: url("../Image/btnArrowInactive.png") no-repeat;
-}
-
-#btnT1:hover, #btnT1:active, #btnT2:hover, #btnT2:active{
-	background: url("../Image/btnArrowActive.png") no-repeat;
-	cursor: pointer;
-}
 
 /*   -----------------------------------------------------------------------------------------------------------------  */
 /*   ---------                                           ABOUT                                      ------------------  */
