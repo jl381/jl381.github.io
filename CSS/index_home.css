@@ -1,0 +1,44 @@
+/*   -----------------------------------------------------------------------------------------------------------------  */
+/*   ---------                                           HOME                                       ------------------  */
+
+#Portrait{
+	position: relative;
+	width: 135px;
+	height: 180px;
+
+	float: left;
+	margin: 0px 0px 0px 30px;
+	background-image: url("../Image/portrait.png");
+}
+
+#MessageContent-1{
+	position: relative;
+	float: right;
+	width: 695px;
+}
+
+#MessageContent-2{
+	position: relative;
+	width: 490px;
+	height: 320px;
+	padding-top: 10%;
+	padding-left: 44%;
+	margin-top: -20px;
+	background: url("../Image/mapping.png") no-repeat;
+}
+
+.bCircle{
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin: 5px 5px 0px 0px;
+	color: orange;
+	text-align: center;
+
+	border: 1px;
+	border-style: solid;
+	border-radius: 100%;
+
+	background-color: rgba(36,27,13,.25);
+	border-color: rgba(197,128,5,.5);
+}

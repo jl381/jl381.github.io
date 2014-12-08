@@ -211,8 +211,8 @@ function loadContentTo(pageID,container){
 
   // if(pageID == "Contact"){createAnimation("contactEffect", 30);}
 }
-
-$(window).click(function(e) {
+// click
+$(window).mouseover(function(e) {
   var x = e.clientX, y = e.clientY,
   elementMouseIsOver = document.elementFromPoint(x, y);
     // document.getElementById(elementMouseIsOver.id).style.backgroundColor = "rgba(15,10,5,.9)";
