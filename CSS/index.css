@@ -49,6 +49,8 @@ body {
 	border-right: 0px;
 	border-style: solid;
 
+	cursor: pointer;
+
 	background: -webkit-linear-gradient(left, rgba(175, 99, 25, 1), rgba(250,208,1,1));
 	background: -o-linear-gradient(right, rgba(175, 99, 25, 1), rgba(250,208,1,1)); 
 	background: -moz-linear-gradient(right, rgba(175, 99, 25, 1), rgba(250,208,1,1));

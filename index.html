@@ -27,11 +27,11 @@
       <div id="banner"></div>
       <div id="navigationBar">   
         <li class="tabs">
-          <a href="#"onclick="rollSlideTo(1)" id="tabStart">Home</a>
-          <a href="#"onclick="rollSlideTo(2)" >Articles</a>
-          <a href="#"onclick="rollSlideTo(3)" >Projects</a>
-          <a href="#"onclick="rollSlideTo(4)" >About</a>
-          <a href="#"onclick="rollSlideTo(5)" id="tabEnd">Contact</a>
+          <a onclick="rollSlideTo(1)" id="tabStart">Home</a>
+          <a onclick="rollSlideTo(2)" >Articles</a>
+          <a onclick="rollSlideTo(3)" >Projects</a>
+          <a onclick="rollSlideTo(4)" >About</a>
+          <a onclick="rollSlideTo(5)" id="tabEnd">Contact</a>
         </li>
       </div>
     </div>
@@ -82,7 +82,7 @@
     <div id="grabArea" onmouseover="setVisibility(1)" onmouseout="setVisibility(0)" ondrag="dragging(event)" onmouseup="resetPosition(event)"></div>
     <div id="footer">
       <div id="text">
-        © Design by <a href="#">Jurijs Levadnijs</a>, 2014
+        © Design by <a >Jurijs Levadnijs</a>, 2014
       </div>
     </div>
 
@@ -169,11 +169,11 @@
     <div id="activeProjectTitle">Software Projects</div>
     <div id="pageBox">
       <div id="pageBank">
-        <div class="pageClass" id="page-1"><div class="left"></div><div class="right"></div></div>
-        <div class="pageClass" id="page-2"><div class="left"></div><div class="right"></div></div>
-        <div class="pageClass" id="page-3"><div class="left"></div><div class="right"></div></div>
-        <div class="pageClass" id="page-4"><div class="left"></div><div class="right"></div></div>
-        <div class="pageClass" id="page-5"><div class="left"></div><div class="right"></div></div>
+        <div class="pageClass" id="page-1"><div class="pageItSelf"></div></div>
+        <div class="pageClass" id="page-2"><div class="pageItSelf"></div></div>
+        <div class="pageClass" id="page-3"><div class="pageItSelf"></div></div>
+        <div class="pageClass" id="page-4"><div class="pageItSelf"></div></div>
+        <div class="pageClass" id="page-5"><div class="pageItSelf"></div></div>
       </div>
     </div>
   </div>
@@ -184,135 +184,139 @@
 <div id="ProjectsDeck" style="display:none">
   <li class="miniTab">
     <div id="lCorner"></div>
-    <a id="1" onclick="turnPage(id)">1</a>
-    <a id="2" onclick="turnPage(id)">2</a>
-    <a id="3" onclick="turnPage(id)">3</a>
-    <a id="4" onclick="turnPage(id)">4</a>
-    <a id="5" onclick="turnPage(id)">5</a>
+    <a id="1" onclick="gotoPage(id)"><img src="Image\Projects\Sections\report.png"></a>
+    <a id="2" onclick="gotoPage(id)"><img src="Image\Projects\Sections\gallery.png"></a>
+    <a id="3" onclick="gotoPage(id)"><img src="Image\Projects\Sections\video.png"></a>
+    <a id="4" onclick="gotoPage(id)"><img src="Image\Projects\Sections\interract.png"></a>
+    <a id="5" onclick="gotoPage(id)"><img src="Image\Projects\Sections\info.png"></a>
     <div id="rCorner"></div>
   </li>
 </div>
 
-
+<!-- SOFTWARE -->
 <div id="projectListSoftware" style="display:none">
   <li>
-    <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="loadProjectContent(id)">
-    <img src="Image/Projects/titleHidoter.png">Hidoter</div>
-    
-    <div class="projectTitle" id="PiratesChess" onmouseover="throwUp(this)" onclick="loadProjectContent(id)">
-    <img src="Image/Projects/titlePiratesChess.png">Pirates Chess</div>
+    <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="projectSelection(id)">
+      <img src="Image/Projects/titleHidoter.png">Hidoter</div>
+
+      <div class="projectTitle" id="PiratesChess" onmouseover="throwUp(this)" onclick="projectSelection(id)">
+        <img src="Image/Projects/titlePiratesChess.png">Pirates Chess</div>
 
 
-  </li>
-</div>
+      </li>
+    </div>
 
-<div id="projectListMedia" style="display:none">
-  <li>
-    <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="loadProjectContent(id)">
-    <img src="Image/Projects/titleHidoter.png">Hidoter</div>
+<!-- MEDIA -->
+    <div id="projectListMedia" style="display:none">
+      <li>
+        <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="projectSelection(id)">
+          <img src="Image/Projects/titleHidoter.png">Hidoter</div>
 
-  </li>
-</div>
+        </li>
+      </div>
 
-<div id="projectList3D" style="display:none">
-  <li>
-    <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="loadProjectContent(id)">
-    <img src="Image/Projects/titleHidoter.png">Hidoter</div>
-
-
-  </li>
-</div>
-
-<div id="projectListWeb" style="display:none">
-  <li>
-    <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="loadProjectContent(id)">
-    <img src="Image/Projects/titleHidoter.png">Hidoter</div>
+<!-- 3D -->
+      <div id="projectList3D" style="display:none">
+        <li>
+          <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="projectSelection(id)">
+            <img src="Image/Projects/titleHidoter.png">Hidoter</div>
 
 
-  </li>
-</div>
+          </li>
+        </div>
 
-<div id="projectListOther" style="display:none">
-  <li>
-    <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="loadProjectContent(id)">
-    <img src="Image/Projects/titleHidoter.png">Hidoter</div>
-
-
-  </li>
-</div>
+<!-- WEB -->
+        <div id="projectListWeb" style="display:none">
+          <li>
+            <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="projectSelection(id)">
+              <img src="Image/Projects/titleHidoter.png">Hidoter</div>
 
 
+            </li>
+          </div>
 
-<!-- ********************************************************************************** -->
-
-<div id="About" style="display:none">
- <h1>About</h1>
- <h2>About</h2>
-</div>
-
-<div id="AboutDeck" style="display:none">
-  <li class="miniTab">
-  </li>
-</div>
-
-<!-- ********************************************************************************** -->
-
-<div id="Contact" style="display:none">
- <h1>Contact</h1>
- <div id="pageContent">
-   <div id="contactImg"></div>
-   <div id="contactContent">
-    <h3>Extras</h3>
-    <!-- <img src="https://fbstatic-a.akamaihd.net/rsrc.php/yl/r/H3nktOa7ZMg.ico" width="16px" height="16px"> Unavailable<br> -->
-
-    <img src="https://pages.github.com/favicon.ico" width="16px" height="16px">
-    Link: <a href=" ">jl381.github.io</a><br>
-
-    <img src="https://static.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico" width="16px" height="16px">
-    Link: <a href="http://nl.linkedin.com/pub/jurijs-levadnijs/a1/a48/477">view profile</a><br>
-
-    <img src="http://s.uicdn.com/gmx.com/3.3/img/favicon.ico" width="16px" height="16px">
-    Email: <a>jurijs1204@gmx.com</a><br>
-
-    <img src="https://a.gfx.ms/OLFav.ico" width="16px" height="16px">
-    Email: <a>segara69@hotmail.com</a><br>
-
-    <br><h3>Message:
-    <input type="submit" value="Send">
-    <input type="reset" value="Reset"></h3>
-    <form action="MAILTO:segara69@hotmail.com" method="post" enctype="text/plain">
-      Name:
-      <input type="text" name="name" placeholder="Your name"><br><br>
-      Email:
-      <input type="text" name="mail" placeholder="Your e-mail"><br><br>
-      <textarea rows="20" cols="45"></textarea><br><br>
-    </form>
-
-  </div>
-</div>
-
-<h2>Contact</h2>
-</div>
+<!-- OTHER -->
+          <div id="projectListOther" style="display:none">
+            <li>
+              <div class="projectTitle" id="Hidoter" onmouseover="throwUp(this)" onclick="projectSelection(id)">
+                <img src="Image/Projects/titleHidoter.png">Hidoter</div>
 
 
-<div id="ContactDeck" style="display:none">
-  <li class="miniTab">
-  </li>
-</div>
+              </li>
+            </div>
 
-<!-- ********************************************************************************** -->
 
-<script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="Script/jquery-ui.js"></script>
-<script type="text/javascript" src="Script/index.js"></script>
-<script type="text/javascript" src="Script/raphael-min.js"></script>
-<script type="text/javascript" src="Script/Shape.js"></script>
-<script type="text/javascript" src="Script/contentDrag.js"></script>
-<script type="text/javascript" src="Script/mouse.js"></script>
-<script type="text/javascript" src="Script/animation.js"></script>
-<script type="text/javascript" src="Script/projectPage.js"></script>
-<script type = "text/javascript">
-  loadContentTo("Projects","content");
+
+            <!-- ********************************************************************************** -->
+
+            <div id="About" style="display:none">
+             <h1>About</h1>
+             <h2>About</h2>
+           </div>
+
+           <div id="AboutDeck" style="display:none">
+            <li class="miniTab">
+            </li>
+          </div>
+
+          <!-- ********************************************************************************** -->
+
+          <div id="Contact" style="display:none">
+           <h1>Contact</h1>
+           <div id="pageContent">
+             <div id="contactImg"></div>
+             <div id="contactContent">
+              <h3>Extras</h3>
+              <!-- <img src="https://fbstatic-a.akamaihd.net/rsrc.php/yl/r/H3nktOa7ZMg.ico" width="16px" height="16px"> Unavailable<br> -->
+
+              <img src="https://pages.github.com/favicon.ico" width="16px" height="16px">
+              Link: <a href=" ">jl381.github.io</a><br>
+
+              <img src="https://static.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico" width="16px" height="16px">
+              Link: <a href="http://nl.linkedin.com/pub/jurijs-levadnijs/a1/a48/477">view profile</a><br>
+
+              <img src="http://s.uicdn.com/gmx.com/3.3/img/favicon.ico" width="16px" height="16px">
+              Email: <a>jurijs1204@gmx.com</a><br>
+
+              <img src="https://a.gfx.ms/OLFav.ico" width="16px" height="16px">
+              Email: <a>segara69@hotmail.com</a><br>
+
+              <br><h3>Message:
+              <input type="submit" value="Send">
+              <input type="reset" value="Reset"></h3>
+              <form action="MAILTO:segara69@hotmail.com" method="post" enctype="text/plain">
+                Name:
+                <input type="text" name="name" placeholder="Your name"><br><br>
+                Email:
+                <input type="text" name="mail" placeholder="Your e-mail"><br><br>
+                <textarea rows="20" cols="45"></textarea><br><br>
+              </form>
+
+            </div>
+          </div>
+
+          <h2>Contact</h2>
+        </div>
+
+
+        <div id="ContactDeck" style="display:none">
+          <li class="miniTab">
+          </li>
+        </div>
+
+        <!-- ********************************************************************************** -->
+
+        <script type="text/javascript" src="Script/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="Script/jquery-ui.js"></script>
+        <script type="text/javascript" src="Script/index.js"></script>
+        <script type="text/javascript" src="Script/raphael-min.js"></script>
+        <script type="text/javascript" src="Script/Shape.js"></script>
+        <script type="text/javascript" src="Script/contentDrag.js"></script>
+        <!-- // <script type="text/javascript" src="Script/mouse.js"></script> -->
+        <script type="text/javascript" src="Script/animation.js"></script>
+        <script type="text/javascript" src="Script/projectPage.js"></script>
+        <script type = "text/javascript">
+          loadContentTo("Home","content");
   // setInterval(function(){ window.location = window.location; }, 1200);
   // createAnimation("projectTable", 50);
 </script>

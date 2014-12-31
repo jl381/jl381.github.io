@@ -33,9 +33,10 @@
 	background: -webkit-linear-gradient(left, rgba(230, 125, 55, 1), rgba(175, 99, 25, 1), black);
 	background: -o-linear-gradient(right, rgba(230, 125, 55, 1), rgba(175, 99, 25, 1), black); 
 	background: -moz-linear-gradient(right, rgba(230, 125, 55, 1), rgba(175, 99, 25, 1), black);
-	background: linear-gradient(0deg, rgba(175, 99, 25, 1), rgba(250,258,1,1) );
+	background: linear-gradient(0deg, rgba(175, 99, 25, 1), rgba(250,253,1,1) );
 	cursor:pointer;
-	color: rgb(55,55,255);
+	/*color: rgb(55,55,255);*/
+	color: black;
 }
 
 #projectTable{
@@ -176,6 +177,24 @@
 	background-color: black;
 }
 
+.pageClass .pageItSelf{
+	position: relative;
+	float: left;
+	left: 1px;
+	width: 890px;
+	height: 552px;
+	background-color: rgba(25,25,25,.5);
+}
+
+
+
+
+
+
+
+
+
+
 .pageClass .left{
 	position: relative;
 	float: left;
@@ -184,6 +203,7 @@
 	height: 552px;
 	background-color: rgba(25,25,25,.5);
 }
+
 .pageClass .right{
 	position: relative;
 	float: right;

@@ -17,7 +17,7 @@ setInterval(function(){
 	previousMouseX = currentMouseX; 
 	previousMouseY = currentMouseY;
 	// p(ticks);
-}, 70);
+}, 100);
 
 
 
